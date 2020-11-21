@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+
+
+<h1 style="text-align: center;" class="font-weight-bold"><u>Covid 19 country wise Details</u></h1><br>
+
+ 
+ 
+
+    {{#each info as |val key| }}
+<h2 style="text-align: center;">{{val.country}}</h2>
+<img class="center" src=" {{val.countryInfo.flag}}"/><br>
+<h3 style="text-align: center;" class=" text-warning">Total Cases:{{val.cases}}</h3>
+<h3 style="text-align: center;" class="text-success">Recovered:{{val.recovered}}</h3>
+<h3 style="text-align: center;" class="text-danger">Deaths:{{val.deaths}}</h3>
+ <br>
+ <hr>
+{{/each}}
+
+
+
+
+
+ <style>
+    .center{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style> 
+
+ 
